@@ -1,0 +1,161 @@
+html{
+    scroll-behavior: smooth;
+}
+.heading{
+    padding-top: 7rem;
+    padding-bottom: 1.5rem;
+}
+
+#blogStart{
+    border-bottom: 2px double #fff;
+    margin-bottom: 20px;
+}
+
+.blogImage {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    animation-name: imageEntrance;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    
+}
+.blogImage img{
+    height: 510px;
+    width: 1050px;
+    border-radius: 24px; 
+}
+
+.blogs  p{
+    font-size: 1.6rem;
+    line-height: 1.8;
+    color:#ccc;
+    padding:3rem 2.3rem;
+}
+.blogs .bloggers{
+    display: flex;
+    flex-direction: column;
+}
+.blogs .bloggers .box{
+    /* border:var(--border);  */
+    display: flex; 
+    /* height: 500px;   */
+    margin: 20px 0px;
+    box-shadow: 4px 4px 6px 2px #403f3e , -4px -4px 6px 2px #403f3e;
+}
+.blogger2{
+    flex-direction: row-reverse;
+}
+
+.blogs .bloggers .box .image{
+    height: 39rem;
+    overflow:hidden;
+    width: 40%;
+    margin: 54px 0px;
+    border-radius: 20px;
+}
+
+.blogs .bloggers .box .image img{
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+}
+
+.blogs .bloggers .box:hover .image img{
+    transform: scale(1.2);
+}
+
+.blogs .bloggers .box .content{
+    padding:2rem;
+    width: 60%;
+}
+
+.blogs .bloggers .box .content .title{
+    font-size: 2.5rem;
+    line-height: 1.5;
+    color:#fff;
+}
+
+.blogs .bloggers .box .content .title:hover{
+    color:var(--main-color);
+}
+
+.blogs .bloggers .box .content span{
+    color:var(--main-color);
+    display: block;
+    padding-top: 1rem;
+    font-size: 2rem;
+}
+
+
+
+@keyframes imageEntrance{
+    from{
+        top:550px;
+    }
+    to{
+        top: 0px;
+    }
+    
+}
+
+
+
+
+
+
+
+/* media queries  */
+@media (max-width:1111px){
+
+    html{
+        font-size: 55%;
+    }
+
+    .header{
+        padding:1.5rem 2rem;
+    }
+
+    section{
+        padding:2rem;
+    }
+
+}
+
+@media (max-width:800px){
+
+    html{
+        font-size: 50%;
+    }
+    .blogs .bloggers .box .image{
+        margin: 106px 0px;
+    }
+
+    .blogImage img {
+        height: 310px;
+        width: 450px;
+    }
+    
+}
+@media (max-width:600px) {
+
+    html {
+        font-size: 45%;
+    }
+
+    .blogImage img {
+        overflow: hidden;
+        height: 210px;
+        width: 350px;
+    }
+    .blogs .bloggers .box{
+        flex-direction: column
+    }
+    .blogs .bloggers .box .image{
+        margin: 10px 0px;
+        width: 100%;
+    }
+    .blogs .bloggers .box .content{
+        width: 100%;
+    }
+}

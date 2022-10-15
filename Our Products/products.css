@@ -1,0 +1,142 @@
+.heading {
+    font-size: 6rem;
+}
+
+.home {
+    min-height: 110vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: var(--bg);
+    border-bottom: 2px double #fff;
+}
+.home .content {
+    max-width: 53rem;
+}
+
+.home .image{
+    width: 37%;
+    background: var(--main-color);
+    display: flex;
+    justify-content: center;
+    border-bottom-left-radius: 100px;
+    /* position: relative;
+    top: 0px;
+    right: -147px; */
+    position: absolute;
+    top: 73px;
+    right: 108px;
+    height: calc(100vh - 10rem);
+    animation-name: dropDown;
+    animation-duration: 2s;
+    overflow: hidden;
+}
+
+.home .image img{
+    height: calc(100vh - 21rem);
+    animation-name: dropDownImg;
+    animation-duration: 2s;
+    
+}
+
+.products .box-container{
+    padding-bottom: 30px;
+}
+
+.products .box-container .box .content p {
+    color: #fff;
+    font-size: 1.5rem;
+    margin: 15px 0px;
+}
+.products .box-container .box:hover{
+    box-shadow: 4px 4px 6px 2px #403f3e , -4px -4px 6px 2px #403f3e;
+}
+
+@keyframes dropDown{
+    from{
+        height: 0px;
+    }
+    to{
+        height: calc(100vh - 10rem);
+    }
+}
+@keyframes dropDownImg{
+    from{
+        height: 0px;
+    }
+    to{
+        height: calc(100vh - 21rem);
+    }
+}
+
+@media (max-width:1148px){
+    .home .image img{
+        width: 250px;
+        height: calc(100vh - 30rem);
+    }
+    .home .image{
+        right: 17px;
+    }
+    html {
+        font-size: 55%;
+    }
+    .header {
+        padding: 1.5rem 2rem;
+    }
+
+    section {
+        padding: 2rem;
+    }
+    @keyframes dropDownImg{
+        from{
+            height: 0px;
+        }
+        to{
+            height: calc(100vh - 30rem);
+        }
+    }
+
+}
+
+@media(max-width : 794px){
+    .home {
+        /* background-position: center; */
+        justify-content: center;
+        text-align: center;
+        align-items: flex-end;
+    }
+    .home .image{
+        right: 155px;
+        left: 154px;
+        width: 60%;
+        height: calc(100vh - 31rem);
+
+    }
+    .home .content h3 {
+        font-size: 4.5rem;
+    }
+
+    .home .content p {
+        font-size: 1.5rem;
+    }
+    .heading{
+        padding-bottom: 1.5rem;
+    }
+    @keyframes dropDown{
+        from{
+            height: 0px;
+        }
+        to{
+            height: calc(100vh - 31rem);
+        }
+    }
+}
+
+@media (max-width:450px) {
+
+    .heading{
+        font-size: 5rem;
+        text-align: left;
+    }
+
+}
